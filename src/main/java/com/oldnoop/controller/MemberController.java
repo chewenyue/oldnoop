@@ -191,7 +191,7 @@ public class MemberController {
 	@RequestMapping("/logs")
 	public String logs(HttpSession session,Model model) {
 		Member m = (Member) session.getAttribute("member");
-		if(m==null){
+		if ( m==null ){
 			return "redirect:/member/toLogin";
 		}
 		Long mid = m.getId();
